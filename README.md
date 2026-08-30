@@ -308,17 +308,9 @@ Example delivery times from the processed data include **4 days** and **7 days**
 
 ### 📊 Visual Output
 
-The project generates visualizations to explore:
+<img width="721" height="560" alt="image" src="https://github.com/user-attachments/assets/380ea54c-ada8-4d1c-83c9-947d42c663c9" />
+ <img width="704" height="470" alt="image" src="https://github.com/user-attachments/assets/81f76925-26a7-4837-9373-e88d92f3fc7b" />
 
-* Sales distribution
-* Profit distribution
-* Quantity distribution
-* Discount distribution
-* Category and sub-category performance
-* Regional performance
-* Customer segments
-* Shipping information
-* Delivery time
 
 ### 💡 Main Observation
 
