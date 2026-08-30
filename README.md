@@ -270,6 +270,63 @@ This project was created as a Python-based **Exploratory Data Analysis (EDA)** p
 
 ---
 
+## 📊 Output
+
+The EDA produced the following results:
+
+### Dataset Overview
+
+* **Total Records:** 10,194
+* **Original Columns:** 21
+* **After Feature Engineering:** 22 columns
+* **Numerical Columns:** Sales, Quantity, Discount, Profit
+* **Date Columns:** Order Date, Ship Date
+* **New Feature:** Delivery Days
+
+The initial dataset contains 10,194 rows and 21 columns. After calculating delivery time, the dataset contains 22 columns.
+
+### 📈 Statistical Output
+
+| Metric  |    Sales | Quantity | Discount |   Profit |
+| ------- | -------: | -------: | -------: | -------: |
+| Mean    |   228.23 |     3.79 |    0.155 |    28.67 |
+| Minimum |    0.444 |        1 |        0 | -6599.98 |
+| Maximum | 22638.48 |       14 |      0.8 | 8399.976 |
+| Median  |    53.91 |        3 |     0.20 |     8.69 |
+
+These statistics come directly from the notebook's `df.describe()` output.
+
+### 🔍 Data Processing Output
+
+The project converts `Order Date` and `Ship Date` into datetime format and creates:
+
+```python
+df['Delivery Days'] = (df['Ship Date'] - df['Order Date']).dt.days
+```
+
+Example delivery times from the processed data include **4 days** and **7 days**.
+
+### 📊 Visual Output
+
+The project generates visualizations to explore:
+
+* Sales distribution
+* Profit distribution
+* Quantity distribution
+* Discount distribution
+* Category and sub-category performance
+* Regional performance
+* Customer segments
+* Shipping information
+* Delivery time
+
+### 💡 Main Observation
+
+The dataset contains both **positive and negative profit values**, showing that some transactions generate profit while others result in losses. The profit values range from **-6,599.978 to 8,399.976**.
+
+> **Note:** The notebook data provided does not support claiming a specific “best-selling category” or “best region” without calculating those values. Do not put unsupported results in the README.
+
+
 ## ⭐ Conclusion
 
 This project demonstrates how **Exploratory Data Analysis** can be used to transform raw sales records into meaningful business information. By analyzing sales, profit, customers, products, regions, discounts, and delivery time, organizations can better understand their sales performance and identify areas that require improvement.
